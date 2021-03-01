@@ -1,0 +1,56 @@
+/*
+* 后台通用样式
+*/
+
+.layui-table-cell {
+    height: auto;
+}
+
+/*nav缩进*/
+.nav-padding-left {
+    padding-left: 10%;
+}
+
+/*红星标记*/
+.help-require:after {
+    top: 6px;
+    right: 5px;
+    color: red;
+    content: '*';
+    position: absolute;
+    margin-left: 4px;
+    font-weight: 700;
+    line-height: 1.8em;
+}
+
+.help-block:before {
+    content: "\e60b";
+}
+
+/*输入框下提示*/
+.help-block {
+    color: #999;
+    font-size: 12px;
+}
+
+/*字体颜色*/
+.color-green {
+    color: #090 !important;
+}
+/*字体描述*/
+.color-desc {
+    color: #999 !important;
+}
+/*字体大小*/
+.font-w7 {
+    font-weight: 700 !important;
+}
+/*左间距*/
+.margin-left-5 {
+    margin-left: 5px !important;
+}
+/*剧中对齐*/
+.text-align {
+    text-align:center;
+}
+

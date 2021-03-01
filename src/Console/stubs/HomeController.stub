@@ -1,0 +1,15 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Http\Controllers\Controller;
+//use Encore\Admin\Controllers\Dashboard;
+
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        return 'welcome to ge-auth';
+    }
+}

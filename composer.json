@@ -1,0 +1,24 @@
+{
+    "name": "bennent/geauth-for-laravel",
+    "description": "the rbac auth for laravel",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Bennent\\Geauth\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bennent\\Geauth\\GeauthServiceProvider"
+            ],
+            "aliases": {
+                "geauth": "Bennent\\Geauth\\GeauthFacade"
+            }
+        }
+    }
+}
