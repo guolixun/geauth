@@ -1,5 +1,5 @@
 {
-    "name": "bennent/geauth-for-laravel",
+    "name": "bennent/geauth",
     "description": "the rbac auth for laravel",
     "license": "MIT",
     "require": {},
