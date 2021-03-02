@@ -24,20 +24,20 @@ app
 │   ├── Controllers
 │   ├──    ├── Admin
 │   ├──    ├──  ├── HomeController.php
-│   ├──    ├──  ├── ...  //后台的主要逻辑可以全部写在这
+│   ├──    ├──  ├── ...  //this will backend business logic
 routes
-└── admin.php //后台的路由在这
-... //其余的与laravel目录全部保持一致
+└── admin.php // this is backend router
+... 
 ```
-- 配置
+- Settings
 ```
-app\Providers\RouteServiceProvider.php 增加后台路由分类解析
+app\Providers\RouteServiceProvider.php
 public function map()
 {
     ...
 +    $this->mapAdminRoutes();
 }
-+++ 可根据实际情况自行调整即可
++++
 protected function mapAdminRoutes()
 {
     Route::prefix('admin')
@@ -45,10 +45,11 @@ protected function mapAdminRoutes()
         ->group(base_path('routes/admin.php'));
 }
 
-app\Http\Kernel.php 增加路由中间件分组
+app\Http\Kernel.php
 
 protected $middlewareGroups = [
     ...
++++  // the admin route middleware groups
 +++ 'admin' => [
 +++    \Illuminate\Session\Middleware\StartSession::class
 +++ ]
@@ -56,4 +57,4 @@ protected $middlewareGroups = [
 ];
 ```
 
-- 启动服务后，直接访问 http://localhost/admin, 用户名[admin] 密码[admin123]
+- Start Service，access http://localhost/admin, user[admin] pass[admin123]
