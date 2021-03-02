@@ -31,7 +31,7 @@ routes
 ```
 - 配置
 ```
-app\Providers\RouteServiceProvider.php 增加后台路由解析
+app\Providers\RouteServiceProvider.php 增加后台路由分类解析
 public function map()
 {
     ...
@@ -44,6 +44,16 @@ protected function mapAdminRoutes()
         ->namespace($this->namespace . '\Admin')
         ->group(base_path('routes/admin.php'));
 }
+
+app\Http\Kernel.php 增加路由中间件分组
+
+protected $middlewareGroups = [
+    ...
++++ 'admin' => [
++++    \Illuminate\Session\Middleware\StartSession::class
++++ ]
+    ...
+];
 ```
 
 - 启动服务后，直接访问 http://localhost/admin, 用户名[admin] 密码[admin123]
