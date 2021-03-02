@@ -1,6 +1,6 @@
 {
     "name": "bennent/geauth",
-    "description": "the rbac auth for laravel",
+    "description": "Laravel RBAC permission package base on GE-auth backend with LayUI",
     "license": "MIT",
     "require": {},
     "autoload": {
