@@ -28,7 +28,7 @@
                 "Bennent\\Geauth\\GeauthServiceProvider"
             ],
             "aliases": {
-                "geauth": "Bennent\\Geauth\\GeauthFacade"
+                "geauth": "Bennent\\Geauth\\Facades\\Geauth"
             }
         }
     }
