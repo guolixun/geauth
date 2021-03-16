@@ -45,7 +45,7 @@ class GeauthCommand extends Command
     public function handle()
     {
 
-        //$this->initDatabase();
+        $this->initDatabase();
 
         $this->initAdminDirectory();
     }

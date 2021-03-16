@@ -17,7 +17,7 @@ return [
 
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
-        //'namespace' => 'App\\Http\\Controllers\\Admin',
+        'namespace' => 'App\\Http\\Controllers\\Admin',
 
         //'middleware' => ['web', 'admin'],
     ],
